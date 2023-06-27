@@ -1,0 +1,49 @@
+{% extends "./modulos.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+  
+    <div class="container-items container-xl">
+        {% for p in prod %}
+          <div class="item">
+            <figure>
+              <img src="{{p.image_url.url}}" class="card-img-top" alt="producto">
+            </figure>
+            <div class="info-product">
+              <h2>{{p.nombre}}</h2>
+              <p class="price">${{p.precio}}</p>
+              <p>{{p.descripcion}}</p>
+              <button class="btn-add-cart btn-secondary">Añadir al carrito</button>
+              <a id="boton-reducir" href="reducir_stock/{{p.sku}}" class="btn btn-success">Comprar</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+  
+ 
+  
+    <div class="container-cart-products hidden-cart">
+        <div class="row-product"></div>
+        <div class="cart-total">
+            <h3>Total:</h3>
+            <span class="total-pagar">$0</span>
+        </div>
+    </div>
+
+    <div id="alerta" class="alert alert-success" role="alert" style="display: none;">
+      Stock reducido exitosamente.
+    </div>
+
+    
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/reloj.js' %}"></script>
+<script src="{% static 'js/carrito.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/oscuro.js' %}"></script>
+{% endblock %}

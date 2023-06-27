@@ -1,0 +1,82 @@
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.carousel-item img{
+    height: 700px;
+    padding: 15px;
+}
+/*
+.contenedorFooter{
+    width: 100%;
+    background-color: rgb(170, 170, 170);
+    display: flex;
+    flex-direction: row;
+}
+
+.boxFooter{
+    border: solid rgb(231, 231, 231);
+    width: 33.3%;
+    text-align: center;
+    padding: 20px;
+}
+*/
+
+.boxFooter img{
+    width: 30px;
+    height: 30px;
+}
+
+.boxItems{
+    display: flex;
+    align-items: center;
+}
+
+.boxItems img{
+    padding-right: 0px;
+}
+
+#footer1 .col{
+    background-color: rgb(170, 170, 170);
+    border: solid rgb(231, 231, 231);
+    height: 190px;
+    padding: 15px;
+    
+}
+
+.alo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+
+}
+.container img{
+    width: 275px;
+    height: 275px;
+    align-items: center;
+}
+.lel img{
+    width: 200px;
+    height: 200px;
+    align-items: center;
+
+}
+
+small{
+    color: whi;
+    font-weight: bolder;
+}
+
+footer {
+    background-color: #808080;
+}
+
+.plomo-footer {
+    background-color: #A0A0A0; /* Cambia el valor de color por el plomo deseado */
+    /* Otros estilos para el footer */
+  }
+  
+

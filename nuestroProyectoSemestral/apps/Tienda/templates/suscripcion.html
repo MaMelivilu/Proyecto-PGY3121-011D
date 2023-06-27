@@ -1,0 +1,72 @@
+{% extends "./modulos.html" %}
+{% load static %}
+
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
+{% endblock %}
+
+<body >
+{% block body %}
+      
+      <div class="container mt-5">
+        <h1>Suscripcion</h1>
+        <br>
+        <form action="/registrarSuscripcion" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <label for="txtRut">Rut:</label>
+                    <input name="txtRut" type="text" id="txtRut" class="form-control" placeholder="EJ: 12.345.678-9">
+
+                </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <label for="txtNombre">Nombre:</label>
+                <input name="txtNombre" type="text" id="txtNombre" class="form-control" placeholder="Escriba su nombre aqui">
+              </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-12">
+  
+                  <label for="txtApellido">Apellido:</label>
+                  <input name="txtApellido" type="text" id="txtApellido" class="form-control" placeholder="Escriba su apellido aqui">
+                </div>
+  
+              </div>
+
+              <div class="row">
+
+                <div class="col-md-12">
+  
+                  <label for="txtCorreo">Correo:</label>
+                  <input name="txtCorreo" type="text" id="txtCorreo" class="form-control" placeholder="Ingrese su correo electronico">
+                </div>
+  
+              </div>
+
+          
+        <br>
+        <button class="btn btn-primary">Suscribirse</button>        
+        </form>
+    </div>
+    {% endblock %}
+    {% block script %}
+    <script src="{% static 'js/jquery-3.6.4.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/registrar.js' %}"></script>
+    <script src="{% static 'js/reloj.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/oscuro.js' %}"></script>
+    {% endblock %}
+</body>
+{% block footer %}
+
+{% endblock %}
+</html>

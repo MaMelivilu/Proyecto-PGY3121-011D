@@ -1,0 +1,54 @@
+{% extends "./modulos.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/oscuro.css' %}">
+{% endblock %}
+<body>
+{% block body %}
+<br>
+<div class="container mt-5">
+    <table id="myTable" class="table">
+        <thead>
+          <tr>
+            <th scope="col">Rut</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for p in sus %}
+          <tr>
+            <th scope="row">{{p.rut}}</th>
+            <td>{{p.apellido}}</td>
+            <td>{{p.nombre}}</td>
+            <td>{{p.correo}}</td>
+            <td class="d-flex">
+                <a href="/editarSuscripcion/{{p.rut}}" class="btn btn-primary mx-2">Editar</a>
+                <a href="/eliminarSuscripcion/{{p.rut}}" class="btn btn-danger mx-2">Eliminar</a>
+            </td>
+          </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock %}
+
+{% block script %}
+  <script src="{% static 'js/agregar.js' %}"></script>
+  <script src="{% static 'js/reloj.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/oscuro.js' %}"></script>
+  <script src="{% static 'js/api.js' %}"></script>
+  {% endblock %}
+
+  {% block footer %}
+
+  {% endblock %}  
+
+</body>
+</html>

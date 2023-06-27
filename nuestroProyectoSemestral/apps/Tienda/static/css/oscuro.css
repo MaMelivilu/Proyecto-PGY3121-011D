@@ -1,0 +1,105 @@
+.oscuro{ 
+    background-color: #1f1f1f; 
+    color: #f1eded; 
+  }
+  
+.claro{ 
+  background-color: #ffffff; 
+  color: #000000; 
+  } 
+
+  
+.oscuro h2{
+  color: white;
+}
+
+.oscuro h3{
+  color: black;
+}
+
+.oscuro p{
+  color: white;
+}
+
+.claro h2{
+  color: white;
+}
+
+.claro p{
+  color: white;
+}
+
+.oscuro .boxItems p{
+  color: black;
+}
+
+.oscuro .boxFooter p{
+  color: black;
+}
+
+.oscuro {
+  color: white;
+}
+
+.oscuro .box i{
+  color: black;
+}
+
+.oscuro .boxItems #casita1{
+  color: white; 
+}
+
+.claro .boxItems p{
+  color: black; 
+}
+
+.claro .boxFooter p{
+  color: black; 
+}
+.claro label{
+  color: black; 
+}
+
+.modal-content #modaltext{
+  color:black;
+}
+
+.claro .box #casita1{
+  color: white;
+}
+
+.oscuro .box #casita1{
+  color: white;
+}
+
+.oscuro .lol {
+  color: black;
+}
+.oscuro .lol p{
+  color: black;
+}
+
+.claro .container-items h2{
+  color: black;
+}
+
+.claro .container-items p{
+  color: black;
+}
+
+.claro .cart-product p{
+  color: black;
+}
+
+.oscuro .cart-product{
+  color: black;
+}
+
+.oscuro th {
+  color: white;
+}
+
+.oscuro td {
+  color: white;
+}
+

@@ -1,0 +1,71 @@
+{% extends "./modulos.html" %}
+{% load static %}
+
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/oscuro2.css' %}">
+{% endblock %}
+
+<body>
+{% block body %}
+    <div class="container-xl">
+      <div id="carouselExampleCaptions" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{prod1.image_url.url}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Bandanas para tu mascota</h5>
+              <p>Seguro que con esto se va ver aun mas bonito.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{prod2.image_url.url}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>¿Animalista?</h5>
+              <p>Accesorios mas simples para tus animales.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{prod3.image_url.url}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Tu mascota feliz</h5>
+              <p>Todos tipos de accesorios para facilitar las cosas a tus mascotas justamente AQUI.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Suscribete</h5>
+          <p style="color:black" class="card-text">Suscribete y accede a diferentes tipos de ofertas exclucivas para ti por tan solo $4.999.</p>
+          <a href="/suscripciones" class="btn btn-primary">Suscribirse</a>
+        </div>
+      </div>
+
+      {% endblock %}
+      {% block script %}
+      <script src="{% static 'js/reloj.js '%}"></script>
+      <script type="text/javascript" src="{% static 'js/oscuro.js '%}"></script>
+      <script src="{% static 'js/api.js' %}"></script>
+      {% endblock %}  
+</body>
+</html>

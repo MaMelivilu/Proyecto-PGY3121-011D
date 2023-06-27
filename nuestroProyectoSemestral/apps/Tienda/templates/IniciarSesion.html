@@ -1,0 +1,66 @@
+{% extends "./modulos.html" %}
+{% load static %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+<body>
+{% block body %}
+<br>
+<br>
+      <div class="container">
+        <h1>Iniciar Sesion</h1>
+        <br>
+        <form action="#">
+          <div class="form-group">
+            <label for="txtUsuario"> Usuario: </label>
+            <input type="text" class="form-control" id="txtUsuario" placeholder="Usuario o Correo" >
+            <small id="valUsuario">Debe ingresar nombre de usuario</small>
+            <br>
+            <label for="txtContraseña"> Contraseña: </label>
+            <input type="password" class="form-control" id="txtContraseña" placeholder="Contraseña">
+            <small id="valContraseña">Debe ingresar su contraseña</small>
+            <br>
+            <div class="alo">
+              <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="validar();">Iniciar</button>
+              &nbsp;
+              <a href="/registrar"><button type="button" class="btn btn-warning">Registrarse</button></a>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h6 id="modaltext" class="modal-title fs-5" id="exampleModalLabel">Ingreso</h6>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modaltext" class="modal-body">
+                      Como desea ingresar:
+                    </div>
+                  <br>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="mostrarAdmin();">Ingresar como Admin</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="mostrarUsuario();">Ingresar como Usuario</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      {% endblock %}
+      {% block script %}
+      <script src="{% static 'js/inicioSesion.js' %}"></script>
+      <script src="{% static 'js/reloj.js' %}"></script>
+      <script type="text/javascript" src="{% static 'js/oscuro.js' %}"></script>
+      {% endblock %}
+
+      {% block footer %}
+
+{% endblock %}  
+
+</body>
+
+</html>

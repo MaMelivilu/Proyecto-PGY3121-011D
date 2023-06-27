@@ -1,0 +1,26 @@
+.error{
+    color: red;
+    
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.boxFooter img{
+    width: 30px;
+    height: 30px;
+}
+
+.boxItems{
+    display: flex;
+    align-items: center;
+}
+
+.boxItems img{
+    padding-right: 0px;
+}
+
+#footer1 {
+    background-color: white;
+}
